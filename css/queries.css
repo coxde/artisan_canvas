@@ -34,15 +34,15 @@
         padding: 4.8rem;
     }
 
-    .blog__grid {
+    .product__grid {
         gap: 3.2rem;
     }
 
-    .blog__info-box {
+    /* .product__info-box {
         padding: 3.2rem 2.4rem 1.2rem 2.4rem;
-    }
+    } */
 
-    .blog__title {
+    .product__title {
         font-size: 2rem;
     }
 
@@ -94,12 +94,12 @@
         min-height: 38rem;
     }
 
-    .blog__grid {
+    .product__grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 4.8rem;
     }
 
-    .blog__box {
+    .product__box {
         min-height: 40rem;
     }
 

@@ -23,7 +23,7 @@
 }
 
 .logo__text {
-    font-family: 'Playfair Display', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-weight: 700;
     font-size: 3rem;
     color: #2b8a3e;
@@ -172,6 +172,68 @@
 }
 
 /********************/
+/* PRODUCTS SECTION */
+/********************/
+
+.section-products {
+    padding: 12.8rem 0;
+    overflow: hidden;
+}
+
+.product__grid {
+    gap: 4.8rem;
+}
+
+.product__box {
+    display: flex;
+    flex-direction: column;
+}
+
+.product__img {
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.product__img:hover {
+    transform: scale(1.15);
+}
+
+.product__info-box {
+    display: flex;
+    flex-direction: column;
+    padding: 2.4rem 1.6rem;
+    gap: 1.6rem;
+    align-items: center;
+}
+
+.product__title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.product__meta {
+    display: flex;
+    gap: 2.4rem;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    letter-spacing: 1px;
+}
+
+.product__meta-author,
+.product__meta-price {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.product__meta-price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2b8a3e;
+}
+
+/********************/
 /* FEATURES SECTION */
 /********************/
 
@@ -209,144 +271,6 @@
 .feature__text {
     font-size: 1.8rem;
     line-height: 1.8;
-}
-
-/************************/
-/* TESTIMONIALS SECTION */
-/************************/
-
-.section-testimonials {
-    padding: 12.8rem 0;
-    background-color: #ebfbee;
-    overflow: hidden;
-}
-
-.testimonial__box {
-    min-height: 32rem;
-    display: flex;
-    flex-direction: column;
-    gap: 3.2rem;
-    padding: 6.4rem;
-    background-color: #fff;
-    border: 1px solid rgba(235, 251, 238, 0.5);
-    border-radius: 8px;
-    box-shadow: 0 0.8rem 1.6rem rgba(17, 55, 25, 0.08);
-    transition: all 0.5s;
-}
-
-.testimonial__box:hover {
-    transform: scale(1.05);
-    box-shadow: 0 3.2em 6.4rem rgba(17, 55, 25, 0.04);
-}
-
-.testimonial__avatar-box {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    column-gap: 2.4rem;
-    row-gap: 0.4rem;
-    align-items: center;
-    justify-items: start;
-}
-
-.testimonial__text-box {
-    position: relative;
-}
-
-.testimonial__quote-img {
-    position: absolute;
-    width: 3.6rem;
-    height: 3.6rem;
-    top: -1.8rem;
-    left: -0.8rem;
-}
-
-.testimonial__text {
-    font-size: 1.6rem;
-    line-height: 1.6;
-    letter-spacing: 1px;
-    /* Only effective when setting any position other than static */
-    position: relative;
-    z-index: 1;
-}
-
-.testimonial__name {
-    align-self: end;
-    font-size: 1.6rem;
-    font-weight: 500;
-}
-
-.testimonial__name-description {
-    grid-column: 2 / 3;
-    align-self: start;
-    font-size: 1.2rem;
-    color: #6f6f6f;
-}
-
-.testimonial__img {
-    grid-row: 1 / 3;
-    justify-self: end;
-    width: 6.4rem;
-    height: 6.4rem;
-    border-radius: 50%;
-    border: 4px solid #95c59f;
-}
-
-/*****************/
-/* BLOGS SECTION */
-/*****************/
-
-.section-blogs {
-    padding: 12.8rem 0;
-    overflow: hidden;
-}
-
-.blog__grid {
-    gap: 4.8rem;
-}
-
-.blog__box {
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    border-radius: 4px;
-    box-shadow: 0 2.4rem 4.8rem rgba(17, 55, 25, 0.1);
-    transition: all 0.5s;
-}
-
-.blog__box:hover {
-    transform: translateY(-1.6rem);
-}
-
-.blog__img {
-    width: 100%;
-    border-radius: 4px 4px 0 0;
-}
-
-.blog__info-box {
-    display: flex;
-    flex-direction: column;
-    padding: 4.8rem 3.2rem 1.2rem 3.2rem;
-    gap: 1.6rem;
-    align-items: center;
-}
-.blog__meta {
-    display: flex;
-    gap: 1.6rem;
-    font-size: 1.6rem;
-    line-height: 1.6;
-    letter-spacing: 1px;
-}
-
-.blog__meta-author,
-.blog__meta-date {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-}
-
-.blog__title {
-    font-size: 2rem;
-    font-weight: 600;
 }
 
 /***************/
@@ -608,11 +532,11 @@
     overflow: hidden;
 }
 
-.blog__heading {
+.product__heading {
     margin-bottom: 4.8rem;
 }
 
-.blog__description {
+.product__description {
     max-width: 80rem;
     font-size: 2rem;
     line-height: 1.6;
@@ -622,127 +546,6 @@
 .section-blog-grid {
     padding: 4.8rem 0 6.4rem 0;
     overflow: hidden;
-}
-
-/**************/
-/* ABOUT PAGE */
-/**************/
-
-/* About Title Section */
-.section-about-title {
-    padding: 12.8rem 0;
-    overflow: hidden;
-    background-color: #ebfbee;
-}
-
-.about__description {
-    max-width: 65rem;
-    padding-bottom: 2.4rem;
-    font-size: 2rem;
-    line-height: 1.6;
-}
-
-/* About Statement Section */
-.section-about-statement {
-    padding: 12.8rem 0 38.4rem 0;
-}
-
-.about__heading {
-    margin-bottom: 3.2rem;
-}
-
-.statement__title-box {
-    display: flex;
-    align-items: center;
-    gap: 3.2rem;
-    margin-bottom: 4.8rem;
-}
-
-.statement__icon {
-    color: #2b8a3e;
-    height: 4.8rem;
-    width: 4.8rem;
-    background-color: #ebfbee;
-    padding: 1.6rem;
-    border-radius: 50%;
-}
-
-.statement__title {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #333;
-}
-
-.statement__text {
-    font-size: 2rem;
-    line-height: 1.8;
-}
-
-/* About Team Section */
-.section-about-team {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding: 38.4rem 0 12.8rem 0;
-    background-color: #ebfbee;
-}
-
-.team__img-box {
-    position: absolute;
-    top: -21.5%;
-    max-width: 100rem;
-    padding: 0;
-    border-radius: 16px;
-    overflow: hidden;
-}
-
-.team__img {
-    width: 100%;
-}
-
-.team__heading {
-    margin-bottom: 4.8rem;
-}
-
-.team__description {
-    max-width: 80rem;
-    font-size: 2rem;
-    line-height: 1.6;
-}
-
-.team__grid {
-    gap: 4.8rem;
-}
-
-.team__box {
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    border-radius: 4px;
-    box-shadow: 0 2.4rem 4.8rem rgba(17, 55, 25, 0.1);
-    transition: all 0.5s;
-}
-
-.team__img {
-    width: 100%;
-    border-radius: 4px 4px 0 0;
-}
-
-.team__info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-    padding: 2.4rem 1.6rem;
-    font-size: 1.6rem;
-    line-height: 1.6;
-    letter-spacing: 1px;
-}
-
-.team__info-name {
-    font-size: 2.4rem;
-    font-weight: 600;
 }
 
 /**************/
