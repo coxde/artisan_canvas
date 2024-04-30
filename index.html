@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="At DigitalCraft Studio, we go beyond conventional web design and development. We are a team of passionate creators dedicated to crafting digital excellence. Elevate your online presence with our innovative designs, cutting-edge technology, and a commitment to precision. Join us on a journey where your ideas meet exceptional craftsmanship, and together, we'll craft a digital masterpiece tailored to your vision. Welcome to the intersection of creativity and technology – where your success is our masterpiece."
+        />
+
+        <link rel="manifest" href="manifest.json" />
+        <link rel="icon" href="img/icon/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="img/icon/apple-touch-icon.png" />
+
+        <link rel="stylesheet" href="css/general.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/queries.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=Titillium+Web:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <title>DigitalCraft Studio: Crafting Digital Excellence</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header--blank"></div>
+            <div class="header--container">
+                <div class="logo">
+                    <picture>
+                        <!-- Credit: https://www.flaticon.com/free-icon/layer_10169782 -->
+                        <source srcset="img/logo.webp" type="image/webp" />
+                        <img
+                            class="logo__img"
+                            src="img/logo.png"
+                            width="48px"
+                            height="48px"
+                            alt="The logo of DigitalCraft. A circle code block shape on the stack shape thing."
+                            loading="lazy"
+                        />
+                    </picture>
+                    <a class="logo__text" href="#">DigitalCraft</a>
+                </div>
+
+                <nav class="navigation">
+                    <ul class="nav-list">
+                        <li><a class="nav-list__item" href="#">Home</a></li>
+                        <li>
+                            <a class="nav-list__item" href="pages/blog.html"
+                                >Blog</a
+                            >
+                        </li>
+                        <li>
+                            <a class="nav-list__item" href="pages/about.html"
+                                >Account</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="nav-list__item btn--small text--center"
+                                href="pages/quote.html"
+                                >Your Cart</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+
+                <button class="btn-mobile-nav">
+                    <ion-icon
+                        class="icon-mobile-nav"
+                        name="menu-outline"
+                    ></ion-icon>
+                    <ion-icon
+                        class="icon-mobile-nav"
+                        name="close-outline"
+                    ></ion-icon>
+                </button>
+            </div>
+            <div class="header--blank"></div>
+        </header>
+
+        <main>
+            <section class="section-hero">
+                <div class="hero">
+                    <div class="hero__text-box">
+                        <h1
+                            class="heading--primary text--blue-darker text--center"
+                        >
+                            Embark on a
+                            <span class="text--blue">Journey</span> of Digital
+                            Transformation with us
+                        </h1>
+
+
+                        <p
+                            class="hero__description text--blue-darker text--center"
+                        >
+                            We are dedicated to elevating brands through a
+                            masterful blend of creative design, cutting-edge
+                            technology, and strategic expertise.
+                        </p>
+
+                        <div class="hero__btn">
+                            <a class="btn btn--full text--center" href="#cta"
+                                >Success starts today</a
+                            >
+                            <a
+                                class="btn btn--outline text--center"
+                                href="#features"
+                                >Learn more &darr;</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="hero__img-box">
+                        <picture>
+                            <!-- Credit: https://unsplash.com/photos/black-floor-lamp-on-living-room-sofa-FV3GConVSss -->
+                            <source srcset="img/hero.webp" type="image/webp" />
+                            <img
+                                class="hero__img"
+                                src="img/hero.jpg"
+                                alt="A spacious room with a sizable table and chairs in our studio, serving as the main image of the hero section."
+                            />
+                        </picture>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-features" id="features">
+                <div class="container grid grid--center-h text--center">
+                    <span class="subheading">Features</span>
+                    <h2 class="heading--secondary feature__heading">
+                        We Offer the Best Service for You
+                    </h2>
+                    <aside class="feature__description">
+                        At DigitalCraft Studio, we go beyond conventional web
+                        design and development. We are a team of passionate
+                        creators dedicated to crafting digital excellence.
+                    </aside>
+                    <a class="link" href="pages/service.html"
+                        >Learn more &gt;&gt;</a
+                    >
+                </div>
+
+                <div class="container grid grid--4-cols">
+                    <div class="feature">
+                        <ion-icon
+                            class="feature__icon"
+                            name="options-outline"
+                        ></ion-icon>
+                        <p class="feature__title">
+                            Customized Digital Solutions
+                        </p>
+                        <p class="feature__text">
+                            Crafting unique digital experiences with bespoke
+                            designs and personalized development at
+                            DigitalCraft.
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <ion-icon
+                            class="feature__icon"
+                            name="rocket-outline"
+                        ></ion-icon>
+                        <p class="feature__title">Cutting-Edge Technology</p>
+                        <p class="feature__text">
+                            Stay ahead in the digital realm with innovative
+                            solutions, integrating cutting-edge technologies at
+                            DigitalCraft.
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <ion-icon
+                            class="feature__icon"
+                            name="people-outline"
+                        ></ion-icon>
+                        <p class="feature__title">Strategic User Experience</p>
+                        <p class="feature__text">
+                            DigitalCraft prioritises the creation of intuitive
+                            and user-friendly interfaces whilst emphasising both
+                            usability and accessibility.
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <ion-icon
+                            class="feature__icon"
+                            name="card-outline"
+                        ></ion-icon>
+                        <p class="feature__title">Affordability with Quality</p>
+                        <p class="feature__text">
+                            DigitalCraft ensures affordable access to top-tier
+                            digital solutions without compromising quality,
+                            empowering businesses of all sizes.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-testimonials">
+                <div class="container">
+                    <span class="subheading">Testimonials</span>
+                    <h2 class="heading--secondary text--blue-darker">
+                        Don't Just Take Our Words
+                    </h2>
+                </div>
+
+                <div class="container grid grid--2-cols grid--center-v">
+                    <div class="testimonial__box">
+                        <div class="testimonial__text-box">
+                            <object
+                                class="testimonial__quote-img"
+                                data="img/quote.svg"
+                                type="image/svg+xml"
+                                aria-label="A quote mark image"
+                            ></object>
+                            <blockquote class="testimonial__text">
+                                DigitalCraft Studio understood my vision and
+                                brought it to life. The team's creativity and
+                                proficiency were evident throughout the project.
+                                I highly recommend them for anyone seeking an
+                                <span class="text--highlight">affordable</span>
+                                and top-notch web solution.
+                            </blockquote>
+                        </div>
+                        <div class="testimonial__avatar-box">
+                            <picture>
+                                <source
+                                    srcset="img/david.webp"
+                                    type="image/people/webp"
+                                />
+                                <img
+                                    class="testimonial__img"
+                                    src="img/people/david.jpg"
+                                    alt="Photo of customer David Kim"
+                                    loading="lazy"
+                                />
+                            </picture>
+                            <p class="testimonial__name">David Kim</p>
+                            <p class="testimonial__name-description">
+                                Small Business Owner
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial__box">
+                        <div class="testimonial__text-box">
+                            <object
+                                class="testimonial__quote-img"
+                                data="img/quote.svg"
+                                type="image/svg+xml"
+                                aria-label="A quote mark image"
+                            ></object>
+                            <blockquote class="testimonial__text">
+                                The collaboration with DigitalCraft Studio was
+                                exceptional. Their attention to detail and
+                                commitment to
+                                <span class="text--highlight">quality</span>
+                                resulted in a website that exceeded our
+                                expectations. A reliable partner for any digital
+                                venture.
+                            </blockquote>
+                        </div>
+                        <div class="testimonial__avatar-box">
+                            <picture>
+                                <source
+                                    srcset="img/people/alex.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    class="testimonial__img"
+                                    src="img/people/alex.jpg"
+                                    alt="Photo of customer
+                                Alex Rodriguez"
+                                    loading="lazy"
+                                />
+                            </picture>
+                            <p class="testimonial__name">Alex Rodriguez</p>
+                            <p class="testimonial__name-description">
+                                Founder, CodeWave Innovations
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial__box">
+                        <div class="testimonial__text-box">
+                            <object
+                                class="testimonial__quote-img"
+                                data="img/quote.svg"
+                                type="image/svg+xml"
+                                aria-label="A quote mark image"
+                            ></object>
+                            <blockquote class="testimonial__text">
+                                DigitalCraft Studio transformed our online
+                                presence. Their innovative designs and
+                                <span class="text--highlight"
+                                    >user-centric</span
+                                >
+                                approach have significantly enhanced our brand
+                                image. Truly a team of digital artisans!
+                            </blockquote>
+                        </div>
+                        <div class="testimonial__avatar-box">
+                            <picture>
+                                <source
+                                    srcset="img/people/sarah.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    class="testimonial__img"
+                                    src="img/people/sarah.jpg"
+                                    alt="Photo of
+                                customer Sarah Thompson"
+                                    loading="lazy"
+                                />
+                            </picture>
+                            <p class="testimonial__name">Sarah Thompson</p>
+                            <p class="testimonial__name-description">
+                                CEO, InnovateTech Solutions
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial__box">
+                        <div class="testimonial__text-box">
+                            <object
+                                class="testimonial__quote-img"
+                                data="img/quote.svg"
+                                type="image/svg+xml"
+                                aria-label="A quote mark image"
+                            ></object>
+                            <blockquote class="testimonial__text">
+                                Working with DigitalCraft Studio was a breeze.
+                                Their expertise in both design and development
+                                ensured a seamless process from concept to
+                                launch. The website not only looks fantastic but
+                                also
+                                <span class="text--highlight">performs</span>
+                                very well.
+                            </blockquote>
+                        </div>
+                        <div class="testimonial__avatar-box">
+                            <picture>
+                                <source
+                                    srcset="img/people/emily.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    class="testimonial__img"
+                                    src="img/people/emily.jpg"
+                                    alt="Photo of
+                                customer Emily Carter"
+                                    loading="lazy"
+                                />
+                            </picture>
+                            <p class="testimonial__name">Emily Carter</p>
+                            <p class="testimonial__name-description">
+                                Marketing Director, NexGen Enterprises
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-blogs">
+                <div class="container">
+                    <span class="subheading">Blogs</span>
+                    <h2 class="heading--secondary text--blue-darker">
+                        Latest News about Us
+                    </h2>
+                </div>
+
+                <div
+                    class="container grid blog__grid grid--3-cols grid--center-v"
+                >
+                    <a class="link--box" href="pages/blog.html">
+                        <div class="blog__box">
+                            <picture>
+                                <!-- Credit: https://unsplash.com/photos/a-blue-and-purple-background-with-a-curved-object-in-the-middle-JTucHiLel5U -->
+                                <source
+                                    srcset="img/blog/seo.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    class="blog__img"
+                                    src="img/blog/seo.jpg"
+                                    alt="A illustration of a seo object"
+                                    loading="lazy"
+                                />
+                            </picture>
+
+                            <div class="blog__info-box text--center">
+                                <div class="blog__meta">
+                                    <div class="blog__meta-author">
+                                        <ion-icon
+                                            class="blog__icon"
+                                            name="person-circle-outline"
+                                        ></ion-icon
+                                        >Marcus Johnson
+                                    </div>
+                                    <div class="blog__meta-date">
+                                        <ion-icon
+                                            name="calendar-clear-outline"
+                                        ></ion-icon
+                                        >10 Jan, 2024
+                                    </div>
+                                </div>
+                                <h3 class="blog__title heading--tertiary">
+                                    Mastering SEO for Your Online Presence
+                                </h3>
+                            </div>
+                        </div></a
+                    >
+
+                    <a class="link--box" href="pages/blog.html">
+                        <div class="blog__box">
+                            <picture>
+                                <!-- Credit: https://unsplash.com/photos/a-white-cell-phone-sitting-on-top-of-a-table-mJif93InGaU -->
+                                <source
+                                    srcset="img/blog/mobile.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    class="blog__img"
+                                    src="img/blog/mobile.jpg"
+                                    alt="A illustration of a mobile phone"
+                                    loading="lazy"
+                                />
+                            </picture>
+
+                            <div class="blog__info-box text--center">
+                                <div class="blog__meta">
+                                    <div class="blog__meta-author">
+                                        <ion-icon
+                                            class="blog__icon"
+                                            name="person-circle-outline"
+                                        ></ion-icon
+                                        >Olivia Bennett
+                                    </div>
+                                    <div class="blog__meta-date">
+                                        <ion-icon
+                                            name="calendar-clear-outline"
+                                        ></ion-icon
+                                        >3 Dec, 2023
+                                    </div>
+                                </div>
+                                <h3 class="blog__title heading--tertiary">
+                                    Optimizing UX: The Mobile-First Approach
+                                </h3>
+                            </div>
+                        </div></a
+                    >
+
+                    <a class="link--box" href="pages/blog.html"
+                        ><div class="blog__box">
+                            <picture>
+                                <!-- Credit: https://unsplash.com/photos/orange-plastic-blocks-on-white-surface-_t-l5FFH8VA -->
+                                <source
+                                    srcset="img/blog/trends.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    class="blog__img"
+                                    src="img/blog/trends.jpg"
+                                    alt="A illustration of a red div object"
+                                    loading="lazy"
+                                />
+                            </picture>
+
+                            <div class="blog__info-box text--center">
+                                <div class="blog__meta">
+                                    <div class="blog__meta-author">
+                                        <ion-icon
+                                            class="blog__icon"
+                                            name="person-circle-outline"
+                                        ></ion-icon
+                                        >Jason Miller
+                                    </div>
+                                    <div class="blog__meta-date">
+                                        <ion-icon
+                                            name="calendar-clear-outline"
+                                        ></ion-icon
+                                        >15 Nov, 2023
+                                    </div>
+                                </div>
+                                <h3 class="blog__title heading--tertiary">
+                                    Demystifying Web Design Trends in 2023
+                                </h3>
+                            </div>
+                        </div></a
+                    >
+                </div>
+            </section>
+
+            <section class="section-cta" id="cta">
+                <div class="container">
+                    <div class="cta">
+                        <div class="cta__text-box text--blue-darker">
+                            <h2 class="heading--secondary">
+                                Free First Hour Consultation!
+                            </h2>
+                            <p class="cta__text">
+                                Unlock the potential of your digital journey
+                                with us. Get a quote and schedule your
+                                consultation and let's turn your vision into
+                                reality together.
+                            </p>
+
+                            <form class="cta__form" action="#">
+                                <div>
+                                    <label for="full-name">Full Name</label>
+                                    <input
+                                        id="full-name"
+                                        type="text"
+                                        placeholder="John Smith"
+                                        required
+                                    />
+                                </div>
+
+                                <div>
+                                    <label for="email">Email address</label>
+                                    <input
+                                        id="email"
+                                        type="email"
+                                        placeholder="me@example.com"
+                                        required
+                                    />
+                                </div>
+
+                                <a
+                                    class="btn btn--outline text--center"
+                                    href="pages/quote.html"
+                                >
+                                    Get a quote
+                                </a>
+
+                                <button class="btn btn--dark">
+                                    Contact us
+                                </button>
+                            </form>
+                        </div>
+
+                        <div
+                            class="cta__img-box"
+                            role="img"
+                            aria-label="A table topped with different color samples and a Mac"
+                        ></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container grid grid--footer">
+                <div class="logo-col">
+                    <div class="logo">
+                        <picture>
+                            <!-- Credit: https://www.flaticon.com/free-icon/layer_10169782 -->
+                            <source srcset="img/logo.webp" type="image/webp" />
+                            <img
+                                class="logo__img"
+                                src="img/logo.png"
+                                width="48px"
+                                height="48px"
+                                alt="The logo of DigitalCraft. A circle code block shape on the stack shape thing."
+                                loading="lazy"
+                            />
+                        </picture>
+                        <a class="logo__text" href="#">DigitalCraft</a>
+                    </div>
+
+                    <ul class="social-links">
+                        <li>
+                            <a
+                                class="footer__link"
+                                href="#"
+                                aria-label="A linkedin logo"
+                                ><ion-icon
+                                    class="social-icon"
+                                    name="logo-linkedin"
+                                ></ion-icon
+                            ></a>
+                        </li>
+                        <li>
+                            <a
+                                class="footer__link"
+                                href="#"
+                                aria-label="A Facebook logo"
+                                ><ion-icon
+                                    class="social-icon"
+                                    name="logo-facebook"
+                                ></ion-icon
+                            ></a>
+                        </li>
+                        <li>
+                            <a
+                                class="footer__link"
+                                href="#"
+                                aria-label="A GitHub logo"
+                                ><ion-icon
+                                    class="social-icon"
+                                    name="logo-github"
+                                ></ion-icon
+                            ></a>
+                        </li>
+                    </ul>
+
+                    <p class="copyright">
+                        Copyright &copy; <span class="year">2027</span> by
+                        DigitalCraft Studio. All rights reserved.
+                    </p>
+                </div>
+
+                <div class="address-col">
+                    <p class="footer__heading">Contact Us</p>
+                    <address class="contacts">
+                        <p class="address">
+                            4 Westmoreland St, Temple Bar, Dublin, D02 W951
+                        </p>
+                        <p>
+                            <a class="footer__link" href="tel:016-708-212"
+                                >016-708-212</a
+                            ><br />
+                            <a
+                                class="footer__link"
+                                href="mailto:hello@digitalcraft.studio"
+                                >hello@digitalcraft.studio
+                            </a>
+                        </p>
+                    </address>
+                </div>
+
+                <nav class="nav-col">
+                    <p class="footer__heading">Services</p>
+                    <ul class="footer__nav">
+                        <li>
+                            <a class="footer__link" href="pages/service.html"
+                                >Web Development</a
+                            >
+                        </li>
+                        <li>
+                            <a class="footer__link" href="pages/service.html"
+                                >UI/UX Design</a
+                            >
+                        </li>
+                        <li>
+                            <a class="footer__link" href="pages/service.html"
+                                >Graphics Design</a
+                            >
+                        </li>
+                        <li>
+                            <a class="footer__link" href="pages/service.html"
+                                >Digital Marketing</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+
+                <nav class="nav-col">
+                    <p class="footer__heading">Company</p>
+                    <ul class="footer__nav">
+                        <li>
+                            <a class="footer__link" href="pages/about.html"
+                                >About Us</a
+                            >
+                        </li>
+                        <li>
+                            <a class="footer__link" href="pages/blog.html"
+                                >Our Blog</a
+                            >
+                        </li>
+                        <li>
+                            <a class="footer__link" href="#">Press Media</a>
+                        </li>
+                        <li><a class="footer__link" href="#">Careers</a></li>
+                    </ul>
+                </nav>
+
+                <nav class="nav-col">
+                    <p class="footer__heading">Resources</p>
+                    <ul class="footer__nav">
+                        <li>
+                            <a class="footer__link" href="#">Newsletter</a>
+                        </li>
+                        <li>
+                            <a class="footer__link" href="#">Help Center</a>
+                        </li>
+                        <li>
+                            <a class="footer__link" href="#">Privacy & Terms</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+
+        <script defer src="js/script.js"></script>
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+        ></script>
+    </body>
+</html>
