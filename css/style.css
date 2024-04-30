@@ -301,13 +301,13 @@
 }
 
 .cta__img-box {
-    /* Credit: https://unsplash.com/photos/color-code-book-LPWl2pEVGKc */
+    /* Credit: https://unsplash.com/photos/white-framed-glass-window-during-daytime-z3drmcczVTc */
     background-image: linear-gradient(
             to right bottom,
             rgba(184, 228, 192, 0.25),
             rgba(130, 194, 142, 0.25)
         ),
-        url('../img/design.jpg');
+        url('../img/cta.jpg');
     background-size: cover;
     background-position: center;
 }
