@@ -24,9 +24,9 @@ Paragraph default: 1.6
 
 --- 02 COLORS
 
-- Primary: #1864ab
-- Tints: #e7f5ff #a3c1dd
-- Shades: #114678 #0a2844 #020a11
+- Primary: #5c940d
+- Tints: #f4fce3 #aeca86
+- Shades: #375908 #1c2c04 #090f01
 - Accents:
 - Greys: #888 #767676 #6f6f6f #555 #333
 
@@ -157,7 +157,7 @@ body {
     font-family: 'Titillium Web', sans-serif;
     font-size: 1.6rem;
     font-weight: 500;
-    color: #1864ab;
+    color: #5c940d;
     text-transform: uppercase;
     margin-bottom: 2.4rem;
     letter-spacing: 0.75px;
@@ -185,12 +185,12 @@ body {
 .btn--full:link,
 .btn--full:visited {
     color: #fff;
-    background-color: #1864ab;
+    background-color: #5c940d;
 }
 
 .btn--full:hover,
 .btn--full:active {
-    background-color: #114678;
+    background-color: #375908;
 }
 
 .btn--outline:link,
@@ -201,7 +201,7 @@ body {
 
 .btn--outline:hover,
 .btn--outline:active {
-    background-color: #a3c1dd;
+    background-color: #aeca86;
 }
 
 .btn--small:link,
@@ -210,17 +210,17 @@ body {
     padding: 1.2rem 1.8rem;
     border-radius: 50px;
     color: #fff;
-    background-color: #1864ab;
+    background-color: #5c940d;
 }
 
 .btn--small:hover,
 .btn--small:active {
-    background-color: #114678;
+    background-color: #375908;
 }
 
 .btn--dark {
-    background-color: #0a2844;
-    color: #e7f5ff;
+    background-color: #1c2c04;
+    color: #f4fce3;
     align-self: end;
     padding: 1.2rem;
     border-radius: 9px;
@@ -237,7 +237,7 @@ body {
     margin-top: 1.2rem;
     font-size: 2rem;
     line-height: 1.6;
-    color: #1864ab;
+    color: #5c940d;
     text-decoration: none;
 
     transition: all 0.3s;
@@ -245,7 +245,7 @@ body {
 
 .link:active,
 .link:hover {
-    color: #0a2844;
+    color: #1c2c04;
 }
 
 .link--box,
@@ -262,7 +262,7 @@ body {
 
 *:focus {
     outline: none;
-    box-shadow: 0 0 0 0.4rem #a3c1dd;
+    box-shadow: 0 0 0 0.4rem #aeca86;
 }
 
 /***************************/
@@ -274,20 +274,20 @@ body {
 }
 
 .text--blue {
-    color: #1864ab;
+    color: #5c940d;
 }
 
 .text--blue-bold {
-    color: #1864ab;
+    color: #5c940d;
     font-weight: 700;
 }
 
 .text--blue-dark {
-    color: #0a2844;
+    color: #1c2c04;
 }
 
 .text--blue-darker {
-    color: #020a11;
+    color: #090f01;
 }
 
 .text--highlight {
@@ -305,7 +305,7 @@ body {
     height: 100%;
     width: calc(100% + 4px);
     border-radius: 8px;
-    background-color: #1864ab;
+    background-color: #5c940d;
     z-index: -1;
     transform: rotate(-1deg) translateX(-4px);
 }
