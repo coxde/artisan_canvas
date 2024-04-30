@@ -447,76 +447,6 @@
     color: #555;
 }
 
-/****************/
-/* SERVICE PAGE */
-/****************/
-
-/* Service Title Section */
-.section-service-title {
-    padding: 12.8rem 0;
-    overflow: hidden;
-}
-
-.service__heading {
-    margin-bottom: 4.8rem;
-}
-
-.service__description {
-    max-width: 80rem;
-    font-size: 2rem;
-    line-height: 1.6;
-}
-
-/* Service Table Section */
-.section-service-table {
-    padding: 12.8rem 0;
-    background-color: #ebfbee;
-    overflow: hidden;
-}
-
-.service__table {
-    border-radius: 8px 8px 0 0;
-    border-collapse: collapse;
-    box-shadow: 0 3.2em 6.4rem rgba(17, 55, 25, 0.1);
-    /* Fix table border-radius  */
-    overflow: hidden;
-    font-size: 1.8rem;
-    line-height: 1.6;
-    background-color: rgba(255, 255, 255, 0.85);
-}
-
-.service__table thead th {
-    font-size: 2rem;
-    text-align: left;
-    background-color: #2b8a3e;
-    color: #ebfbee;
-}
-
-.service__table th,
-.service__table td {
-    padding: 1.6rem 2.4rem;
-}
-
-.service__table tbody tr {
-    border-bottom: 1px solid #95c59f;
-}
-
-.service__table tbody tr:nth-of-type(even) {
-    background-color: #ebfbee;
-}
-
-.service__table tbody tr:last-of-type {
-    border-bottom: 3px solid #2b8a3e;
-}
-
-.service__table tbody tr:hover {
-    color: #2b8a3e;
-}
-
-.service__table ol {
-    list-style-position: inside;
-}
-
 /*************/
 /* BLOG PAGE */
 /*************/
@@ -527,11 +457,11 @@
     overflow: hidden;
 }
 
-.product__heading {
+.blog__heading {
     margin-bottom: 4.8rem;
 }
 
-.product__description {
+.blog__description {
     max-width: 80rem;
     font-size: 2rem;
     line-height: 1.6;
@@ -541,6 +471,56 @@
 .section-blog-grid {
     padding: 4.8rem 0 6.4rem 0;
     overflow: hidden;
+}
+
+.blog__grid {
+    gap: 4.8rem;
+}
+
+.blog__box {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 9px;
+    box-shadow: 0 2.4rem 4.8rem rgba(2, 10, 17, 0.1);
+    transition: all 0.5s;
+}
+
+.blog__box:hover {
+    transform: translateY(-1.6rem);
+}
+
+.blog__img {
+    width: 100%;
+    border-radius: 9px 9px 0 0;
+}
+
+.blog__info-box {
+    display: flex;
+    flex-direction: column;
+    padding: 3.6rem 1.6rem 1.2rem 1.6rem;
+    gap: 1.6rem;
+    align-items: center;
+}
+.blog__meta {
+    display: flex;
+    gap: 1.6rem;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    letter-spacing: 0.75px;
+}
+
+.blog__meta-author,
+.blog__meta-date {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.blog__title {
+    font-size: 2rem;
+    font-weight: 600;
 }
 
 /**************/
