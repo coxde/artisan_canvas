@@ -179,25 +179,25 @@
     overflow: hidden;
 }
 
-.product__grid {
+.products__grid {
     gap: 4.8rem;
 }
 
-.product__box {
+.products__box {
     display: flex;
     flex-direction: column;
 }
 
-.product__img {
+.products__img {
     width: 100%;
     transition: all 0.5s;
 }
 
-.product__img:hover {
+.products__img:hover {
     transform: scale(1.15);
 }
 
-.product__info-box {
+.products__info-box {
     display: flex;
     flex-direction: column;
     padding: 2.4rem 1.6rem;
@@ -205,13 +205,13 @@
     align-items: center;
 }
 
-.product__title {
+.products__title {
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 0;
 }
 
-.product__meta {
+.products__meta {
     display: flex;
     gap: 2.4rem;
     font-size: 1.6rem;
@@ -219,14 +219,14 @@
     letter-spacing: 1px;
 }
 
-.product__meta-author,
-.product__meta-price {
+.products__meta-author,
+.products__meta-price {
     display: flex;
     align-items: center;
     gap: 0.4rem;
 }
 
-.product__meta-price {
+.products__meta-price {
     font-size: 2rem;
     font-weight: bold;
     color: #2b8a3e;
@@ -723,3 +723,106 @@
     font-size: 2.4rem;
     padding: 1.6rem 3.2rem;
 }
+
+/****************/
+/* PRODUCT PAGE */
+/****************/
+.section-product-title {
+    padding: 6.4rem 0 4.8rem 0;
+    overflow: hidden;
+}
+
+.product__heading {
+    margin-bottom: 4.8rem;
+}
+
+.section-product-grid {
+    padding: 0 0 6.4rem 0;
+    overflow: hidden;
+}
+
+.section-product-grid .container {
+    max-width: 96rem;
+}
+
+.product__grid {
+    gap: 4.8rem;
+}
+
+.product__img img {
+    width: 100%;
+}
+
+.product__text {
+    padding-bottom: 3.6rem;
+}
+
+.product__info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.product__author {
+    font-size: 2rem;
+}
+
+.product__price {
+    font-size: 3.6rem;
+    font-weight: bold;
+    color: #2b8a3e;
+}
+
+.product__action {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2.4rem 4.8rem;
+    border: 1px solid rgba(17, 55, 25, 0.015);
+    border-radius: 8px;
+    background-color: #ebfbee;
+    box-shadow: 0 0.8rem 1.6rem rgba(17, 55, 25, 0.065);
+}
+
+.product__calc {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.product__quantity {
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+.product__quantity input {
+    margin: 0 2.4rem;
+    padding: 1.2rem;
+    font-size: 2.4rem;
+    font-family: inherit;
+    color: inherit;
+    border: none;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.product__total {
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+.product__total span {
+    margin: 0 2.4rem;
+    font-size: 3.2rem;
+    color: #2b8a3e;
+}
+
+.product__action .btn {
+    font-size: 2.4rem;
+    padding: 1.6rem 3.2rem;
+    margin: 3.2rem 0;
+}
+
+/**************/
+/* LOGIN PAGE */
+/**************/

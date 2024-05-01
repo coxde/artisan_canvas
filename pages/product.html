@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="At Artisan Canvas, you can explore unique and personalized artwork created by talented artists, tailored to your individual style and preferences. Discover handcrafted masterpieces and bespoke art pieces that reflect your personality."
+        />
+
+        <link rel="manifest" href="../manifest.json" />
+        <link rel="icon" href="../img/icon/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="../img/icon/apple-touch-icon.png" />
+
+        <link rel="stylesheet" href="../css/general.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="stylesheet" href="../css/queries.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+            rel="stylesheet"
+        />
+
+        <title>Product - Artisan Canvas</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header--blank"></div>
+            <div class="header--container">
+                <div class="logo">
+                    <picture>
+                        <!-- Credit: https://www.flaticon.com/free-icon/canvas_3419350 -->
+                        <source srcset="../img/logo.webp" type="image/webp" />
+                        <img
+                            class="logo__img"
+                            src="../img/logo.png"
+                            width="48px"
+                            height="48px"
+                            alt="The logo of Artisan Canvas."
+                            loading="lazy"
+                        />
+                    </picture>
+                    <a class="logo__text" href="../index.html"
+                        >Artisan Canvas</a
+                    >
+                </div>
+
+                <nav class="navigation">
+                    <ul class="nav-list">
+                        <li>
+                            <a class="nav-list__item" href="../index.html"
+                                >Home</a
+                            >
+                        </li>
+                        <li>
+                            <a class="nav-list__item" href="blog.html">Blog</a>
+                        </li>
+                        <li>
+                            <a class="nav-list__item" href="account.html"
+                                >Account</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="nav-list__item btn--small text--center"
+                                href="cart.html"
+                                >Your Cart</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+
+                <button class="btn-mobile-nav">
+                    <ion-icon
+                        class="icon-mobile-nav"
+                        name="menu-outline"
+                    ></ion-icon>
+                    <ion-icon
+                        class="icon-mobile-nav"
+                        name="close-outline"
+                    ></ion-icon>
+                </button>
+            </div>
+            <div class="header--blank"></div>
+        </header>
+
+        <main>
+            <section class="section-product-title">
+                <div class="container grid"></div>
+            </section>
+
+            <section class="section-product-grid">
+                <div class="container grid product__grid grid--center-v">
+                    <div class="product__img">
+                        <picture>
+                            <source
+                                srcset="
+                                    ../img/product/afternoon-aspen-grove-gary-kim.jpg
+                                "
+                                type="image/webp"
+                            />
+                            <img
+                                src="../img/product/afternoon-aspen-grove-gary-kim.jpg"
+                                alt="A framed prints. A scenic landscape with a forest of tall white aspen trees."
+                                loading="lazy"
+                            />
+                        </picture>
+                    </div>
+
+                    <div class="product__info text--center">
+                        <div class="product__text">
+                            <h3 class="product__title heading--tertiary">
+                                Afternoon Aspen Grove Framed Print
+                            </h3>
+                            <div class="product__author">Gary Kim</div>
+                        </div>
+
+                        <div class="product__price">98 €</div>
+                    </div>
+
+                    <div class="product__action">
+                        <div class="product__calc">
+                            <div class="product__quantity">
+                                <label for="quantity">Quantity:</label>
+                                <input
+                                    type="number"
+                                    id="quantity"
+                                    name="quantity"
+                                    min="1"
+                                    max="10"
+                                    value="1"
+                                />
+                            </div>
+
+                            <h3 class="product__total">
+                                Subtotal: <span>98 €</span>
+                            </h3>
+                        </div>
+
+                        <button class="btn btn--light text--center">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container grid grid--footer">
+                <div class="logo-col">
+                    <div class="logo">
+                        <picture>
+                            <!-- Credit: https://www.flaticon.com/free-icon/canvas_3419350 -->
+                            <source
+                                srcset="../img/logo.webp"
+                                type="image/webp"
+                            />
+                            <img
+                                class="logo__img"
+                                src="../img/logo.png"
+                                width="48px"
+                                height="48px"
+                                alt="The logo of Artisan Canvas."
+                                loading="lazy"
+                            />
+                        </picture>
+                        <a class="logo__text" href="../index.html"
+                            >Artisan Canvas</a
+                        >
+                    </div>
+
+                    <ul class="social-links">
+                        <li>
+                            <a
+                                class="footer__link"
+                                href="#"
+                                aria-label="A Instagram logo"
+                                ><ion-icon
+                                    class="social-icon"
+                                    name="logo-instagram"
+                                ></ion-icon
+                            ></a>
+                        </li>
+                        <li>
+                            <a
+                                class="footer__link"
+                                href="#"
+                                aria-label="A TikTok logo"
+                                ><ion-icon
+                                    class="social-icon"
+                                    name="logo-tiktok"
+                                ></ion-icon
+                            ></a>
+                        </li>
+                        <li>
+                            <a
+                                class="footer__link"
+                                href="#"
+                                aria-label="A Facebook logo"
+                                ><ion-icon
+                                    class="social-icon"
+                                    name="logo-facebook"
+                                ></ion-icon
+                            ></a>
+                        </li>
+                        <li>
+                            <a
+                                class="footer__link"
+                                href="#"
+                                aria-label="A linkedin logo"
+                                ><ion-icon
+                                    class="social-icon"
+                                    name="logo-linkedin"
+                                ></ion-icon
+                            ></a>
+                        </li>
+                    </ul>
+
+                    <p class="copyright">
+                        Copyright &copy; <span class="year">2027</span> by
+                        Artisan Canvas. All rights reserved.
+                    </p>
+                </div>
+
+                <div class="address-col">
+                    <p class="footer__heading">Contact Us</p>
+                    <address class="contacts">
+                        <p class="address">
+                            42 College St, Cork City, Cork, T04 WT51
+                        </p>
+                        <p>
+                            <a class="footer__link" href="tel:019-728-323"
+                                >019-728-323</a
+                            ><br />
+                            <a
+                                class="footer__link"
+                                href="mailto:hello@artisancanvas.com"
+                                >hello@artisancanvas.com
+                            </a>
+                        </p>
+                    </address>
+                </div>
+
+                <nav class="nav-col">
+                    <p class="footer__heading">Customer</p>
+                    <ul class="footer__nav">
+                        <li>
+                            <a class="footer__link" href="#">Account</a>
+                        </li>
+                        <li>
+                            <a class="footer__link" href="#">Cart</a>
+                        </li>
+                        <li>
+                            <a class="footer__link" href="#"
+                                >Customer Support</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+
+                <nav class="nav-col">
+                    <p class="footer__heading">Company</p>
+                    <ul class="footer__nav">
+                        <li>
+                            <a class="footer__link" href="#">About Us</a>
+                        </li>
+                        <li>
+                            <a class="footer__link" href="../pages/blog.html"
+                                >Blog</a
+                            >
+                        </li>
+                        <li><a class="footer__link" href="#">Careers</a></li>
+                    </ul>
+                </nav>
+
+                <nav class="nav-col">
+                    <p class="footer__heading">Resources</p>
+                    <ul class="footer__nav">
+                        <li>
+                            <a class="footer__link" href="#">Newsletter</a>
+                        </li>
+                        <li>
+                            <a class="footer__link" href="#">Help Center</a>
+                        </li>
+                        <li>
+                            <a class="footer__link" href="#">Privacy & Terms</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+
+        <script defer src="../js/script.js"></script>
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+        ></script>
+    </body>
+</html>
