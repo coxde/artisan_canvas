@@ -90,10 +90,9 @@
 
 /* Fix sticky nav spacing bug */
 .sticky .section-hero,
-.sticky .section-service-title,
 .sticky .section-blog-title,
-.sticky .section-about-title,
-.sticky .section-quote-title {
+.sticky .section-account-title,
+.sticky .section-cart-title {
     margin-top: 8rem;
 }
 
@@ -518,127 +517,209 @@
     font-weight: 600;
 }
 
-/**************/
-/* QUOTE PAGE */
-/**************/
-
-/* Quote Title Section */
-.section-quote-title {
-    padding: 6.4rem 0;
+/****************/
+/* ACCOUNT PAGE */
+/****************/
+.section-account-title {
+    padding: 6.4rem 0 4.8rem 0;
     overflow: hidden;
 }
 
-.quote__heading {
+.account__heading {
     margin-bottom: 4.8rem;
 }
 
-.quote__description {
-    max-width: 80rem;
-    font-size: 2rem;
-    line-height: 1.6;
-}
-
-/* Quote Calculator Section */
-.section-quote-calculator {
-    padding: 12.8rem 0;
-    background-color: #ebfbee;
+.section-account-grid {
+    padding: 0 0 6.4rem 0;
     overflow: hidden;
 }
 
-.pricing__title-box {
+.section-account-grid .container {
+    max-width: 96rem;
+}
+
+.account__grid {
+    gap: 4.8rem;
+}
+
+.account__title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    padding-bottom: 3.6rem;
+}
+
+.account__order-history {
+    padding: 2.4rem;
+}
+
+.account__order-history-table {
+    border-radius: 8px 8px 0 0;
+    border-collapse: collapse;
+    /* Fix table border-radius  */
+    overflow: hidden;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    min-width: 96rem;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+.account__order-history-table thead th {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.8rem;
+    text-align: left;
+    background-color: #2b8a3e;
+    color: #ebfbee;
+}
+
+.account__order-history-table th,
+.account__order-history-table td {
+    padding: 1.6rem 2.4rem;
+}
+
+.account__order-history-table tbody tr {
+    border-bottom: 1px solid #95c59f;
+}
+
+.account__order-history-table tbody tr:nth-of-type(even) {
+    background-color: #ebfbee;
+}
+
+.account__order-history-table tbody tr:last-of-type {
+    border-bottom: 3px solid #2b8a3e;
+}
+
+.account__order-history-table tbody tr:hover {
+    color: #2b8a3e;
+}
+
+.account__order-history-table ol {
+    list-style-position: inside;
+}
+
+.account__details,
+.account__payment-info,
+.account__address-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    padding: 2.4rem;
+    font-size: 1.8rem;
+}
+
+.account__username,
+.account__name,
+.account__payment-id,
+.account__address-street,
+.account__address-city,
+.account__address-state,
+.account__address-code {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.2rem;
+    font-size: 1.8rem;
+}
+
+.account__info-edit {
+    display: flex;
+    flex-direction: column;
+    padding: 2.4rem 14.4rem;
+}
+
+/*************/
+/* CART PAGE */
+/*************/
+.section-cart {
+    padding: 12.8rem 0;
+}
+
+.cart__container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 4.8rem;
+    background-color: #fff;
+    box-shadow: 0 2.4rem 4.8rem rgba(2, 10, 17, 0.1);
+}
+
+.cart__heading {
+    margin-bottom: 4.8rem;
+}
+
+.cart__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart__item {
     display: flex;
     align-items: center;
-    gap: 3.2rem;
-    margin-bottom: 4.8rem;
+    gap: 2.4rem;
+    padding: 2.4rem 0;
+    border-bottom: 1px solid #ebfbee;
 }
 
-.pricing__icon {
-    color: #2b8a3e;
-    height: 4.8rem;
-    width: 4.8rem;
+.cart__img {
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 9px;
 }
 
-.pricing__title {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #333;
+.cart__info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
 }
 
-.pricing__text {
+.cart__title {
     font-size: 2rem;
-    line-height: 1.8;
+    font-weight: 600;
+    margin-bottom: 0;
 }
 
-.pricing__text ul {
-    list-style-position: inside;
-    margin-bottom: 3.2rem;
-}
-
-.quote-calculator {
-    display: flex;
-    flex-direction: column;
-    min-width: 40rem;
-    padding: 3.2rem;
-    background-color: #fff;
-    border-radius: 4px;
-    box-shadow: 0 2.4rem 4.8rem rgba(17, 55, 25, 0.1);
-}
-
-.quote-calculator__title {
-    font-size: 2.4rem;
-}
-
-.quote-calculator__form {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-}
-
-.quote-calculator__form label {
-    display: block;
-    font-size: 1.6rem;
-    font-weight: 500;
-    margin-bottom: 1.2rem;
-}
-
-.quote-calculator__form input,
-.quote-calculator__form select {
-    width: 100%;
-    padding: 1.2rem;
-    margin-bottom: 3.2rem;
+.cart__price {
     font-size: 1.8rem;
-    font-family: inherit;
-    color: inherit;
-    border: 1px solid #ebfbee;
-    /* background-color: #fff; */
-    border-radius: 4px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    color: #2b8a3e;
 }
 
-.quote-calculator__form input::placeholder {
-    color: #aaa;
+.cart__quantity {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    letter-spacing: 1px;
 }
 
-.quote-calculator__form * {
-    transition: all 0.3s;
-}
-
-.quote-calculator__form *:focus {
-    outline: none;
-    box-shadow: 0 0 0 0.8rem #95c59f;
-}
-
-.quote-calculator__form .btn--dark {
-    width: 100%;
-    color: #fff;
+.cart__remove {
     background-color: #2b8a3e;
+    color: #fff;
+    border: none;
+    padding: 1.2rem 2.4rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.quote-calculator__form .btn--dark:hover,
-.quote-calculator__form .btn--dark:active {
-    background-color: #375908;
+.cart__summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4.8rem 0;
+    border-top: 1px solid #ebfbee;
 }
 
-.quote-calculator__link {
-    font-size: 1.2rem !important;
+.cart__total {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2b8a3e;
+}
+
+.cart__checkout {
+    background-color: #2b8a3e;
+    color: #fff;
+    border: none;
+    padding: 1.2rem 2.4rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
 }
