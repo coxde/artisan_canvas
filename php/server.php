@@ -8,16 +8,15 @@ $errors = [];
 
 // Connect to the database
 $db_host = "localhost";
-$db_username = "admin";
-$db_password = "PocDuHM5gc3AwrMtp5Ti5hmQxRbKCJLUmCsU";
+$db_username = "";
+$db_password = "";
 $db_name = "artisan_canvas_db";
 
 $conn = new mysqli($db_host, $db_username, $db_password, $db_name);
 
 // Check connection
 if ($conn->connect_error) {
-    array_push($errors, "Connection Error");
-    exit();
+    array_push($errors, "Database Connection Error");
 }
 
 // Registration
