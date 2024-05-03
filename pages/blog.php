@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -42,7 +44,7 @@
                             loading="lazy"
                         />
                     </picture>
-                    <a class="logo__text" href="../index.html"
+                    <a class="logo__text" href="../index.php"
                         >Artisan Canvas</a
                     >
                 </div>
@@ -50,7 +52,7 @@
                 <nav class="navigation">
                     <ul class="nav-list">
                         <li>
-                            <a class="nav-list__item" href="../index.html"
+                            <a class="nav-list__item" href="../index.php"
                                 >Home</a
                             >
                         </li>
@@ -58,16 +60,42 @@
                             <a class="nav-list__item" href="#">Blog</a>
                         </li>
                         <li>
-                            <a class="nav-list__item" href="account.html"
+                            <?php if (isset($_SESSION["logged_in"])): ?>
+                            <a class="nav-list__item" href="../pages/account.php"
                                 >Account</a
                             >
+                            <?php else: ?>
+                            <a class="nav-list__item" href="../pages/login.php"
+                                >Account</a
+                            >
+                            <?php endif; ?>
                         </li>
                         <li>
+                            <?php
+                            $role = $_SESSION["role"];
+                            if (
+                                isset($_SESSION["logged_in"]) &&
+                                $role == "Customer"
+                            ): ?>
                             <a
                                 class="nav-list__item btn--small text--center"
-                                href="cart.html"
+                                href="../pages/cart.html"
                                 >Your Cart</a
                             >
+                            <?php elseif (isset($_SESSION["logged_in"])): ?>
+                            <a
+                                class="nav-list__item btn--small text--center"
+                                href="../pages/under_construction.html"
+                                >Manage</a
+                            >
+                            <?php else: ?>
+                            <a
+                                class="nav-list__item btn--small text--center"
+                                href="../pages/login.php"
+                                >Log in</a
+                            >
+                            <?php endif;
+                            ?>
                         </li>
                     </ul>
                 </nav>
@@ -449,7 +477,7 @@
                                 loading="lazy"
                             />
                         </picture>
-                        <a class="logo__text" href="../index.html"
+                        <a class="logo__text" href="../index.php"
                             >Artisan Canvas</a
                         >
                     </div>
@@ -550,7 +578,7 @@
                             <a class="footer__link" href="#">About Us</a>
                         </li>
                         <li>
-                            <a class="footer__link" href="../pages/blog.html"
+                            <a class="footer__link" href="../pages/blog.php"
                                 >Blog</a
                             >
                         </li>

@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -49,21 +51,47 @@
                     <ul class="nav-list">
                         <li><a class="nav-list__item" href="#">Home</a></li>
                         <li>
-                            <a class="nav-list__item" href="pages/blog.html"
+                            <a class="nav-list__item" href="pages/blog.php"
                                 >Blog</a
                             >
                         </li>
                         <li>
-                            <a class="nav-list__item" href="pages/account.html"
+                            <?php if (isset($_SESSION["logged_in"])): ?>
+                            <a class="nav-list__item" href="pages/account.php"
                                 >Account</a
                             >
+                            <?php else: ?>
+                            <a class="nav-list__item" href="pages/login.php"
+                                >Account</a
+                            >
+                            <?php endif; ?>
                         </li>
                         <li>
+                            <?php
+                            $role = $_SESSION["role"];
+                            if (
+                                isset($_SESSION["logged_in"]) &&
+                                $role == "Customer"
+                            ): ?>
                             <a
                                 class="nav-list__item btn--small text--center"
                                 href="pages/cart.html"
                                 >Your Cart</a
                             >
+                            <?php elseif (isset($_SESSION["logged_in"])): ?>
+                            <a
+                                class="nav-list__item btn--small text--center"
+                                href="pages/under_construction.html"
+                                >Manage</a
+                            >
+                            <?php else: ?>
+                            <a
+                                class="nav-list__item btn--small text--center"
+                                href="pages/login.php"
+                                >Log in</a
+                            >
+                            <?php endif;
+                            ?>
                         </li>
                     </ul>
                 </nav>
@@ -103,11 +131,29 @@
                         </p>
 
                         <div class="hero__btn">
+                        <?php if (
+                            isset($_SESSION["logged_in"]) &&
+                            $role == "Customer"
+                        ): ?>
                             <a
                                 class="btn btn--outline text--center"
-                                href="pages/login.html"
+                                href="pages/cart.html"
+                                >Your Cart</a
+                            >
+                            <?php elseif (isset($_SESSION["logged_in"])): ?>
+                            <a
+                                class="btn btn--outline text--center"
+                                href="pages/under_construction.html"
+                                >Manage</a
+                            >
+                            <?php else: ?>
+                            <a
+                                class="btn btn--outline text--center"
+                                href="pages/login.php"
                                 >Login</a
                             >
+                            <?php endif; ?>
+
                             <a
                                 class="btn btn--full text--center"
                                 href="#products"
@@ -684,7 +730,7 @@
                             <a class="footer__link" href="#">About Us</a>
                         </li>
                         <li>
-                            <a class="footer__link" href="pages/blog.html"
+                            <a class="footer__link" href="pages/blog.php"
                                 >Blog</a
                             >
                         </li>

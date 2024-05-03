@@ -1,3 +1,5 @@
+<?php include "../php/server.php"; ?>
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -23,14 +25,14 @@
             rel="stylesheet"
         />
 
-        <title>Login - Artisan Canvas</title>
+        <title>Sign up - Artisan Canvas</title>
     </head>
     <body>
         <main>
             <section class="section-login-grid">
                 <div class="container login__grid">
                     <div class="container login__logo">
-                        <a href="../index.html">
+                        <a href="../index.php">
                             <picture>
                                 <!-- Credit: https://www.flaticon.com/free-icon/canvas_3419350 -->
                                 <source
@@ -50,9 +52,9 @@
                     </div>
 
                     <div class="container login__box">
-                        <form>
+                        <form action="signup.php" method="POST">
                             <div>
-                                <label for="username">Username</label>
+                                <label for="username">Your Username</label>
                                 <input
                                     type="text"
                                     id="username"
@@ -62,43 +64,58 @@
                             </div>
 
                             <div>
-                                <label for="password">Password</label>
+                                <label for="email">Your Email</label>
                                 <input
-                                    type="password"
-                                    id="password"
-                                    name="password"
+                                    type="email"
+                                    id="email"
+                                    name="email"
                                     required
                                 />
                             </div>
 
                             <div>
-                                <label for="select-who">Account Type</label>
-                                <select id="select-who" required>
-                                    <option value="customer">Customer</option>
-                                    <option value="artist">Artist</option>
-                                    <option value="supplier">Supplier</option>
+                                <label for="password">Your Password</label>
+                                <input
+                                    type="password"
+                                    id="password_1"
+                                    name="password_1"
+                                    required
+                                />
+                            </div>
+
+                            <div>
+                                <label for="password">Enter the Password Again</label>
+                                <input
+                                    type="password"
+                                    id="password_2"
+                                    name="password_2"
+                                    required
+                                />
+                            </div>
+
+                            <div>
+                                <label for="role">Your Account Type</label>
+                                <select id="role" name="role" required>
+                                    <option value="Customer">Customer</option>
+                                    <option value="Artist">Artist</option>
+                                    <option value="Supplier">Supplier</option>
                                 </select>
                             </div>
 
-                            <input
-                                class="btn btn--light"
-                                type="submit"
-                                value="Login"
-                            />
+                            <div class="login__submit">
+                                <?php include "../php/error.php"; ?>
+                                
+                                <input
+                                    class="btn btn--light"
+                                    name="reg_user"
+                                    type="submit"
+                                    value="Sign up"
+                                />
+                            </div>
                         </form>
                     </div>
                 </div>
             </section>
         </main>
-
-        <script defer src="../js/script.js"></script>
-        <script
-            type="module"
-            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-        ></script>
-        <script
-            nomodule
-            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-        ></script>
     </body>
 </html>

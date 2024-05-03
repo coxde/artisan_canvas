@@ -1,3 +1,5 @@
+<?php include "../php/server.php"; ?>
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -42,7 +44,7 @@
                             loading="lazy"
                         />
                     </picture>
-                    <a class="logo__text" href="../index.html"
+                    <a class="logo__text" href="../index.php"
                         >Artisan Canvas</a
                     >
                 </div>
@@ -50,22 +52,42 @@
                 <nav class="navigation">
                     <ul class="nav-list">
                         <li>
-                            <a class="nav-list__item" href="../index.html"
+                            <a class="nav-list__item" href="../index.php"
                                 >Home</a
                             >
                         </li>
                         <li>
-                            <a class="nav-list__item" href="blog.html">Blog</a>
+                            <a class="nav-list__item" href="blog.php">Blog</a>
                         </li>
                         <li>
                             <a class="nav-list__item" href="#">Account</a>
                         </li>
                         <li>
+                            <?php
+                            $role = $_SESSION["role"];
+                            if (
+                                isset($_SESSION["logged_in"]) &&
+                                $role == "Customer"
+                            ): ?>
                             <a
                                 class="nav-list__item btn--small text--center"
-                                href="cart.html"
+                                href="../pages/cart.html"
                                 >Your Cart</a
                             >
+                            <?php elseif (isset($_SESSION["logged_in"])): ?>
+                            <a
+                                class="nav-list__item btn--small text--center"
+                                href="../pages/under_construction.html"
+                                >Manage</a
+                            >
+                            <?php else: ?>
+                            <a
+                                class="nav-list__item btn--small text--center"
+                                href="../pages/login.php"
+                                >Log in</a
+                            >
+                            <?php endif;
+                            ?>
                         </li>
                     </ul>
                 </nav>
@@ -89,7 +111,25 @@
                 <div class="container grid">
                     <span class="subheading">Account</span>
                     <h2 class="heading--secondary account__heading">
-                        Welcome, John!
+                        <?php if (isset($_SESSION["logged_in"])) {
+                            // Get Name
+                            $user_id = $_SESSION["user_id"];
+                            $role = $_SESSION["role"];
+                            if ($role == "Customer") {
+                                $query = "SELECT Name FROM Customer WHERE UserID = '$user_id'";
+                            } elseif ($role == "Artist") {
+                                $query = "SELECT Name FROM Artist WHERE UserID = '$user_id'";
+                            } elseif ($role == "Supplier") {
+                                $query = "SELECT Name FROM Supplier WHERE UserID = '$user_id'";
+                            }
+                            $result = mysqli_query($conn, $query);
+                            $row = mysqli_fetch_assoc($result);
+                            $name = $row["Name"];
+                            $name_arr = explode(" ", $name);
+                            echo "Welcome, {$name_arr[0]}!";
+                        } else {
+                            echo "Welcome";
+                        } ?>
                     </h2>
                 </div>
             </section>
@@ -100,54 +140,145 @@
                         <h2 class="account__title">Account Details</h2>
                         <div class="account__username">
                             <h3>Username:</h3>
-                            <p>user000</p>
+                            <?php if (isset($_SESSION["logged_in"])) {
+                                echo "<p>{$_SESSION["username"]}</p>";
+                            } ?>
                         </div>
                         <div class="account__name">
                             <h3>Full Name:</h3>
-                            <p>John Smith</p>
+                            <?php if (isset($_SESSION["logged_in"])) {
+                                echo "<p>{$name}</p>";
+                            } ?>
                         </div>
                         <div class="account__type">
                             <h3>Account Type:</h3>
-                            <p>Customer</p>
+                            <?php if (isset($_SESSION["logged_in"])) {
+                                echo "<p>{$_SESSION["role"]}</p>";
+                            } ?>
                         </div>
                     </div>
 
                     <div class="account__address-info">
-                        <h2 class="account__title">Address Information</h2>
-                        <div class="account__address-street">
-                            <h3>Street Address:</h3>
-                            <p>XXXXXXXXX</p>
-                        </div>
-                        <div class="account__address-city">
-                            <h3>City:</h3>
-                            <p>XXXXXXXXX</p>
-                        </div>
-                        <div class="account__address-state">
-                            <h3>State:</h3>
-                            <p>XXXXXXXXX</p>
-                        </div>
-                        <div class="account__address-code">
-                            <h3>Postal Code:</h3>
-                            <p>XXXXXXXXX</p>
-                        </div>
+                        <?php if ($role == "Customer"): ?>
+                            <h2 class="account__title">Address Information</h2>
+                            <?php if (isset($_SESSION["logged_in"])) {
+                                // Get Address
+                                $user_id = $_SESSION["user_id"];
+                                $query = "SELECT Address FROM Customer WHERE UserID = '$user_id'";
+                                $result = mysqli_query($conn, $query);
+                                $row = mysqli_fetch_assoc($result);
+                                $address = $row["Address"];
+                                $address_arr = explode(",", $address);
+                            } ?>
+                            <div class="account__address-street">
+                                <h3>Street Address:</h3>
+                                <?php echo "<p>{$address_arr[0]}</p>"; ?>
+                            </div>
+                            <div class="account__address-city">
+                                <h3>City:</h3>
+                                <?php echo "<p>{$address_arr[1]}</p>"; ?>
+                            </div>
+                            <div class="account__address-state">
+                                <h3>State:</h3>
+                                <?php echo "<p>{$address_arr[2]}</p>"; ?>
+                            </div>
+                            <div class="account__address-code">
+                                <h3>Postal Code:</h3>
+                                <?php echo "<p>{$address_arr[3]}</p>"; ?>
+                            </div>
+
+                        <?php elseif ($role == "Artist"): ?>
+                            <h2 class="account__title">Artist Information</h2>
+                            <div class="account__address-street">
+                                <h3>Portfolio:</h3>
+                                <?php if (isset($_SESSION["logged_in"])) {
+                                    $user_id = $_SESSION["user_id"];
+                                    $query = "SELECT PortfolioURL FROM Artist WHERE UserID = '$user_id'";
+                                    $result = mysqli_query($conn, $query);
+                                    $row = mysqli_fetch_assoc($result);
+                                    $portfolio = $row["PortfolioURL"];
+                                    echo "<a href='{$portfolio}'>{$portfolio}</a>";
+                                } ?>
+                            </div>
+                            <div class="account__address-street">
+                                <h3>Bio:</h3>
+                                <?php if (isset($_SESSION["logged_in"])) {
+                                    $user_id = $_SESSION["user_id"];
+                                    $query = "SELECT Bio FROM Artist WHERE UserID = '$user_id'";
+                                    $result = mysqli_query($conn, $query);
+                                    $row = mysqli_fetch_assoc($result);
+                                    $bio = $row["Bio"];
+                                    echo "<p>{$bio}</p>";
+                                } ?>
+                            </div>
+
+                        <?php elseif ($role == "Supplier"): ?>
+                            <h2 class="account__title">Supplier Information</h2>
+                            <div class="account__address-street">
+                                <h3>Address:</h3>
+                                <?php if (isset($_SESSION["logged_in"])) {
+                                    $user_id = $_SESSION["user_id"];
+                                    $query = "SELECT Address FROM Supplier WHERE UserID = '$user_id'";
+                                    $result = mysqli_query($conn, $query);
+                                    $row = mysqli_fetch_assoc($result);
+                                    $address = $row["Address"];
+                                    echo "<p>{$address}</p>";
+                                } ?>
+                            </div>
+                            <div class="account__address-street">
+                                <h3>Website:</h3>
+                                <?php if (isset($_SESSION["logged_in"])) {
+                                    $user_id = $_SESSION["user_id"];
+                                    $query = "SELECT WebsiteURL FROM Supplier WHERE UserID = '$user_id'";
+                                    $result = mysqli_query($conn, $query);
+                                    $row = mysqli_fetch_assoc($result);
+                                    $website = $row["WebsiteURL"];
+                                    echo "<a href='{$website}'>{$website}</a>";
+                                } ?>
+                            </div>
+                        <?php endif; ?>
                     </div>
 
+                    <?php if ($role == "Customer"): ?>
                     <div class="account__payment-info">
                         <h2 class="account__title">
                             Payment Information (Processed by Stripe)
                         </h2>
                         <div class="account__payment-id">
                             <h3>Payment ID:</h3>
-                            <p>XXXXXXXXX</p>
+                            <?php if (isset($_SESSION["logged_in"])) {
+                                // Get Payment
+                                $user_id = $_SESSION["user_id"];
+                                $query = "SELECT Payment FROM Customer WHERE UserID = '$user_id'";
+                                $result = mysqli_query($conn, $query);
+                                $row = mysqli_fetch_assoc($result);
+                                $payment = $row["Payment"];
+                                echo "<p>{$payment}</p>";
+                            } ?>
                         </div>
                     </div>
+                    <?php endif; ?>
 
-                    <div class="account__info-edit">
-                        <button class="btn btn--light text--center">
+                    <div class="account__btn">
+                        <form action="account.php" method="POST">
+                            <input 
+                                class="btn btn--outline btn--logout text--center"
+                                name="logout"
+                                type="submit"
+                                value="Log out"
+                            />
+                        </form>
+                        <!-- <button class="btn btn--light text--center">
                             Edit Info
-                        </button>
+                        </button> -->
+                        <a
+                            class="btn btn--light text--center"
+                            href="../pages/under_construction.html"
+                            >Edit Info</a
+                        >
                     </div>
 
+                    <?php if ($role == "Customer"): ?>
                     <div class="account__order-history">
                         <h2 class="account__title">Order History</h2>
                         <table class="account__order-history-table">
@@ -159,11 +290,33 @@
                                     <th>Status</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <!-- PHP will fill in the content here -->
-                            </tbody>
+                            <?php
+                            $user_id = $_SESSION["user_id"];
+                            $result = mysqli_query(
+                                $conn,
+                                "SELECT CustomerID FROM Customer WHERE UserID = '$user_id'"
+                            );
+                            $row = mysqli_fetch_assoc($result);
+                            $customer_id = $row["CustomerID"];
+                            $result2 = mysqli_query(
+                                $conn,
+                                "SELECT * FROM `Order` WHERE CustomerID = '$customer_id'"
+                            );
+
+                            echo "<tbody>";
+                            while ($row2 = mysqli_fetch_assoc($result2)) {
+                                echo "<tr>";
+                                echo "<td>" . $row2["OrderID"] . "</td>";
+                                echo "<td>" . $row2["OrderDate"] . "</td>";
+                                echo "<td>" . "NULL" . "</td>";
+                                echo "<td>" . $row2["Status"] . "</td>";
+                                echo "</tr>";
+                            }
+                            echo "</tbody>";
+                            ?>
                         </table>
                     </div>
+                    <?php endif; ?>
                 </div>
             </section>
         </main>
@@ -187,7 +340,7 @@
                                 loading="lazy"
                             />
                         </picture>
-                        <a class="logo__text" href="../index.html"
+                        <a class="logo__text" href="../index.php"
                             >Artisan Canvas</a
                         >
                     </div>
@@ -288,7 +441,7 @@
                             <a class="footer__link" href="#">About Us</a>
                         </li>
                         <li>
-                            <a class="footer__link" href="../pages/blog.html"
+                            <a class="footer__link" href="../pages/blog.php"
                                 >Blog</a
                             >
                         </li>

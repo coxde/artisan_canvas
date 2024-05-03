@@ -320,3 +320,8 @@ body {
     z-index: -1;
     transform: rotate(-1deg) translateX(-4px);
 }
+
+.error {
+    color: #ff6b6b;
+    margin-bottom: 0.8rem;
+}

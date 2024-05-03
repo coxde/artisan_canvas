@@ -621,12 +621,32 @@
     font-size: 1.8rem;
 }
 
-.account__info-edit {
+.account__btn {
+    padding: 2.4rem 4.8rem;
     display: flex;
-    flex-direction: column;
-    padding: 2.4rem 14.4rem;
+    flex-direction: row;
+    gap: 4.8rem;
 }
 
+.account__btn form {
+    display: flex;
+    flex-grow: 1;
+}
+
+.btn--logout {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.account__btn button{
+    flex-grow: 1;
+    border-radius: 8px;
+}
+
+.account__btn a{
+    flex-grow: 1;
+    border-radius: 8px !important;
+}
 /*************/
 /* CART PAGE */
 /*************/
@@ -824,11 +844,11 @@
     margin: 3.2rem 0;
 }
 
-/**************/
-/* LOGIN PAGE */
-/**************/
+/*********************/
+/* LOGIN/SIGNUP PAGE */
+/*********************/
 .section-login-grid {
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
     align-items: center;
     align-content: center;
@@ -836,8 +856,9 @@
 }
 
 .login__grid {
+    padding: 6.4rem 3.2rem;
     display: grid;
-    gap: 3.6rem;
+    gap: 2.4rem;
 }
 
 .login__logo {
@@ -865,7 +886,7 @@
     display: flex;
     flex-direction: column;
     align-items: start;
-    gap: 3.6rem;
+    gap: 3.2rem;
 }
 
 .login__box form div {
@@ -879,12 +900,12 @@
     display: block;
     font-size: 1.6rem;
     font-weight: 500;
-    margin-bottom: 1.2rem;
 }
 
 .login__box input,
-.login__box select {
-    width: 100%;
+.login__box select,
+.login__box textarea {
+    min-width: 100%;
     padding: 1.2rem;
     font-size: 1.8rem;
     font-family: inherit;
@@ -895,12 +916,16 @@
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-.login__box input::placeholder {
+.login__box input::placeholder,
+.login__box textarea::placeholder {
     color: #aaa;
 }
 
-.login__box input[type='submit'] {
-    margin-top: 2.4rem;
+.login__submit {
+    margin-top: 0.8rem;
+}
+
+.login__submit input {
     padding: 1.2rem 2.4rem;
     background-color: #4caf50;
     color: #fff;
@@ -909,7 +934,7 @@
     cursor: pointer;
 }
 
-.login__box input[type='submit']:hover {
+.login__submit input {
     background-color: #3e8e41;
 }
 
@@ -920,4 +945,35 @@
 .login__box *:focus {
     outline: none;
     box-shadow: 0 0 0 0.8rem #95c59f;
+}
+
+.signup__guide a {
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #333;
+}
+
+/***************************/
+/* UNDER CONSTRUCTION PAGE */
+/***************************/
+.message__box {
+    max-width: 48rem;
+    padding: 4.8rem 6.4rem;
+    background-color: #fff;
+    border: 1px solid rgba(17, 55, 25, 0.05);
+    border-radius: 8px;
+    box-shadow: 0 0.4rem 0.8rem rgba(17, 55, 25, 0.1);
+    font-size: 1.6rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.2rem;
+}
+
+.message__box p {
+    font-size: 2rem;
+    line-height: 1.8;
+    text-align: justify;
+    letter-spacing: 1px;
 }
