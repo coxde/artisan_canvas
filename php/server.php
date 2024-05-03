@@ -8,9 +8,9 @@ $errors = [];
 
 // Connect to the database
 $db_host = "localhost";
-$db_username = "admin";
-$db_password = "PocDuHM5gc3AwrMtp5Ti5hmQxRbKCJLUmCsU";
-$db_name = "artisan_canvas_db_123100368";
+$db_username = "";
+$db_password = "";
+$db_name = "db";
 
 $conn = new mysqli($db_host, $db_username, $db_password, $db_name);
 
